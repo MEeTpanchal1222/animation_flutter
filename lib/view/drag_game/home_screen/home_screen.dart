@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -49,15 +51,15 @@ class _MatchingGameState extends State<MatchingGame> {
                 data: emoji,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Emoji(emoji: score[emoji] == true ? '✅' : emoji),
+                  child: SizedBox(height : 100,child: Emoji(emoji: score[emoji] == true ? '✅' : emoji,)),
                 ),
                 feedback: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Emoji(emoji: emoji),
+                  child: SizedBox(height : 100,child: Emoji(emoji: emoji)),
                 ),
                 childWhenDragging: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Emoji(emoji: '🙂'),
+                  child: SizedBox(height : 100,child: Emoji(emoji: '🙂')),
                 ),
               );
             }).toList(),
