@@ -12,6 +12,9 @@ class DetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(task.name),
+        actions: [
+
+        ],
       ),
       body: Center(
         child: Hero(

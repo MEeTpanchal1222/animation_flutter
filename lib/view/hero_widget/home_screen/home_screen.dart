@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import '../detail_screen/detail_screen.dart';
 
@@ -26,13 +27,26 @@ class MainScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
+          SizedBox(height: 44,),
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.fromLTRB(0, 0, 280, 20),
+            child: CircleAvatar(backgroundColor: Colors.black26,radius: 35,),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 150, 0),
             child: Text(
-              'Hello, John.\nThis is a daily quote. You have 10 tasks to do today.',
+              'Hello, John.',
+              style: TextStyle(fontSize: 40),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(40, 0, 50, 0),
+            child: Text(
+              'This is a daily quote. You have 10 tasks to do today.',
               style: TextStyle(fontSize: 18),
             ),
           ),
+          Expanded(child :
           CarouselSlider(
             options: CarouselOptions(
               height: 400,
@@ -60,6 +74,7 @@ class MainScreen extends StatelessWidget {
                 },
               );
             }).toList(),
+          ),
           ),
         ],
       ),
@@ -91,24 +106,44 @@ class TaskCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              '${task.taskCount} Tasks',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CircleAvatar(
+                  radius: 30,
+                  backgroundColor: Colors.white,
+                  child: Icon(Icons.timer_sharp,color: Colors.redAccent,size: 38,),
+                ),
+                CircleAvatar(
+                  radius: 30,
+                  backgroundColor: Colors.white,
+                  child: Icon(Icons.menu_open_outlined,color: Colors.black26,size: 38,),
+                )
+              ],
             ),
-            Text(
-              task.name,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '${task.taskCount} Tasks',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  task.name,
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: 10),
+                LinearProgressIndicator(
+                  value: task.progress / 100,
+                  backgroundColor: Colors.grey[200],
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
+                ),
+                SizedBox(height: 5),
+                Text('${task.progress}%'),
+              ],
             ),
-            SizedBox(height: 10),
-            LinearProgressIndicator(
-              value: task.progress / 100,
-              backgroundColor: Colors.grey[200],
-              valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
-            ),
-            SizedBox(height: 5),
-            Text('${task.progress}%'),
           ],
         ),
       ),
