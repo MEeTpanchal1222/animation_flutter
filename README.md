@@ -4,13 +4,10 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+<img src = "https://github.com/MEeTpanchal1222/animation_flutter/assets/143181413/4b10bb3f-581d-4420-b4d4-c6d7c4dd34d6" width = "200" />
+<img src = "https://github.com/MEeTpanchal1222/animation_flutter/assets/143181413/79d0c5af-70f8-405c-a1a0-3a2e9e8e03ab" width = "200" />
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+[game_video.webm](https://github.com/MEeTpanchal1222/animation_flutter/assets/143181413/f67384e0-7084-4e18-8b95-fcace7694fbc)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[game_video_2.webm](https://github.com/MEeTpanchal1222/animation_flutter/assets/143181413/85f5de2b-2e81-426a-9599-d952a36898ba)
