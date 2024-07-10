@@ -78,10 +78,7 @@ class MainScreen extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
-      ),
+
     );
   }
 }
@@ -111,11 +108,15 @@ class TaskCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CircleAvatar(
-                  radius: 30,
-                  backgroundColor: Colors.white,
-                  child: Icon(Icons.timer_sharp,color: Colors.redAccent,size: 38,),
-                ),
+                // Hero(
+                //   tag: Icons.timer_sharp,
+                  //child:
+          CircleAvatar(
+                    radius: 30,
+                    backgroundColor: Colors.white,
+                    child: Icon(Icons.timer_sharp,color: Colors.redAccent,size: 38,),
+                  ),
+                //),
                 CircleAvatar(
                   radius: 30,
                   backgroundColor: Colors.white,
