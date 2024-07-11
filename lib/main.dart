@@ -1,3 +1,4 @@
+import 'package:animation_flutter/view/ALL_ANIMETED_WIDGET/home_screen.dart';
 import 'package:animation_flutter/view/drag_game/home_screen/home_screen.dart';
 import 'package:animation_flutter/view/hero_widget/home_screen/home_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MainScreen()
+      home: HomeScreen()
       //MatchingGame(),
     );
   }
